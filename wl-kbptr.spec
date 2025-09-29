@@ -10,14 +10,19 @@ Source:         %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  meson
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  gcc
+BuildRequires:  g++
 BuildRequires:  libwayland-client
 BuildRequires:  cmake
 BuildRequires:  wayland-devel
 BuildRequires:  libxkbcommon-devel
 BuildRequires:  cairo-devel
+BuildRequires:  opencv-devel
+BuildRequires:  pixman-devel
 
 Requires:       libxkbcommon
 Requires:       cairo
+BuildRequires:  opencv
+BuildRequires:  pixman
 
 %description
 wl-kbptr - short for Wayland Keyboard Pointer - is a utility to help move the mouse pointer with the keyboard.
@@ -26,7 +31,7 @@ wl-kbptr - short for Wayland Keyboard Pointer - is a utility to help move the mo
 %autosetup -p1
 
 %build
-%meson
+%meson -Dopencv=enabled
 %meson_build
 
 %install
