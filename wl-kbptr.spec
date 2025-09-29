@@ -34,6 +34,7 @@ wl-kbptr - short for Wayland Keyboard Pointer - is a utility to help move the mo
 
 %files
 %{_bindir}/%{name}
+%{_datadir}/applications/%{name}.desktop
 
 %changelog
 %autochangelog
