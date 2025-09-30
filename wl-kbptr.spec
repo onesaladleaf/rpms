@@ -1,6 +1,6 @@
 Name:           wl-kbptr
 Version:        0.4.0
-Release:        %autorelease
+Release:        2
 Summary:        Control the mouse pointer with the keyboard on Wayland
 
 License:        GPL-3.0
